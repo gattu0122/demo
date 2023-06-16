@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        
+        sh git branch: 'main', url: 'https://github.com/gattu0122/demo.git'
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
